@@ -1,28 +1,29 @@
-#Function to encode the password
-def encoding_password(password):
-    encoding_password = password
-    return encoding_password
-#Main menu
-print("Menu")
-print("-------------")
-print("1. Encode")
-print("2. Decode")
-print("3. Quit")
 
-option = input("Please enter an option: ")
+while True:
+    print("Menu")
+    print("-------------")
+    print("1. Encode")
+    print("2. Decode")
+    print("3. Quit")
+    user_input=(int(input("Please enter an option: ")))
+    if user_input=="1":
+        password_in=(input("Please enter your password to encode:"))
+        new_pass=""
+        for char in password_in:
+            if 0<= int(char)<=6:
+                encoded_char= str(int(char)+3)
+                new_pass+=encoded_char
 
-if option == "1": #Option 1
-    password = input("Please enter your password to encode: ")
-    encoding_password = encoding_password(password)
-    print("Your password has been encoded and stored!")
+            else:
+                encoded_char=str((int(char)+3) % 10)
+                new_pass+=encoded_char
+        print("Your password has been encoded and stored!")
+    elif user_input=="2":
+        break
+    elif user_input == "3":
+        break
 
-elif option == "2": #Option 2
-    print("Decoding option is not implemented yet.")
-
-elif option == "3": #Option 3
-    print("Goodbye!")
-
-else: #If else print the invalid statement
-    print("Invalid option. Please select a valid option.")
+'''if __name__ == '__main__':
+    main()'''
 
 
