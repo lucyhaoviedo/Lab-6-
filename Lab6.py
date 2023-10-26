@@ -1,4 +1,3 @@
-
 while True:
     print("Menu")
     print("-------------")
@@ -11,7 +10,7 @@ while True:
         new_pass=""
         for char in password_in:
             if 0<= int(char)<=6:
-                encoded_char= str(int(char)+3) 
+                encoded_char= str(int(char)+3)
                 new_pass+=encoded_char
 
             else:
@@ -26,5 +25,4 @@ while True:
 
 '''if __name__ == '__main__':
     main()'''
-
 
